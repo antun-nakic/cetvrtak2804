@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import Bootun from "./Bootun";
+import iscrtajUsredCrvenogDiva from "./iscrtajUsredCrvenogDiva";
+const Game = React.lazy(() => import("./Flood-It/Game"));
 
 function App() {
+  const NadogradjeniBotun = iscrtajUsredCrvenogDiva(Bootun);
+  const NadogradjeniGame = iscrtajUsredCrvenogDiva(Game);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Bootun />
+        <NadogradjeniGame />
+        <NadogradjeniBotun />
+        {iscrtajUsredCrvenogDiva(Bootun)()}
+      </Suspense>
     </div>
   );
 }

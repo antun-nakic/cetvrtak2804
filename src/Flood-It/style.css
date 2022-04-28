@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+.flood-btn{
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 90% !important;
+  border: 0.5px solid #333;
+  margin: 10px !important;
+}
+#hint{
+  text-align: center;
+  margin-left: auto;
+}
+#hint:hover::after{
+  cursor: pointer;
+  content: "asd";
+}
+main{
+  background-color: white !important;
+}
+.flood-title{
+  font-size: 50px;
+  text-align: center;
+  color: black;
+  font-family: 'Rubik', sans-serif;
+  text-decoration: underline;
+  width: 600px;
+  border-radius: 0.5rem;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  transition: 1s;
+}
+
+.flood-title:hover{
+  
+  cursor: pointer;
+  transform: scale(105%);
+  transition: 1s;
+}
+
+.title-wrap{
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score{
+  text-align: center;
+  color: black;
+  font-family: 'Rubik', sans-serif;
+}
+
+.flood-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Rubik', sans-serif;
+}
+.flood-btn-wrap{
+margin: 0 auto;
+text-align: center;
+}
+
+.flood-btn:hover{
+  cursor: pointer;
+  transform: scale(105%);
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,20%);
+}
+
+.square{
+  width: 40px;
+  height: 40px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
+.boardWrap{
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.shuffle{
+  background-image: url(./shuffle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  font-weight: bold;
+}
+
+
+/* The Modal (background) */
+.my-modal {
+  display: block; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.my-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width:30%; /* Could be more or less, depending on screen size */
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.startNew, .posaljiScore{
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  text-align: center; 
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+  background-color: blueviolet;
+  width: 240px;
+  outline: none;
+  border: none;
+}
+.startNew:hover, .posaljiScore:hover{
+  transform: scale(105%);
+  box-shadow: inset 1px 1px 5rem 50rem rgba(0,0,0,20%);
+  background-color: blueviolet;
+  color: white;
+  cursor: pointer;
+}
+
+
+.endScore{
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
